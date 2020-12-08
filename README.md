@@ -9,6 +9,13 @@ The script fetches the pairs from the site and places them in the coins.json. Th
 - Set a maximum of open orders, so you don't get too many open orders
 - Open order isolation - When X percent of your wallet balance gets hit by open orders, only the open order pairs will be traded until the percentage drops below X
 
+**This is an interim release to work with LickHunter Pro 1.76
+This sets the same settings for all coins (you can change the values within the script), but that will be changed for the upcoming GUI version.
+$longOffset = "2.7"
+$shortOffset = "2.7"
+$lickValue = "1000"
+This release doesn't work for Bybit yet.**
+
 # Prerequisites:
 - PowerShell 5.1 - https://www.microsoft.com/en-us/download/details.aspx?id=54616
 - You have to have a working LickHunterPro configuration, all settings in settings.json should be in place
@@ -17,6 +24,9 @@ The script fetches the pairs from the site and places them in the coins.json. Th
 - Place **Start-LickHunterPro-VarPairV1.xx.ps1** and **Stop-LickHunterPro.ps1** in the root of the LickHunterPro folder (Example: C:\LickHunterPro\).
 - Edit **Start-LickHunter-Pro-VarPairV1.xx.ps1** with **NotePad++** or **Windows PowerShell ISE**
   - $botName = the name for your bot **Example: LHP001**
+  - $longOffset = "2.7" **This applies to all coins for now - the soon to be published GUI will change that**
+  - $shortOffset = "2.7" **This applies to all coins for now - the soon to be published GUI will change that**
+  - $lickValue = "1000" **This applies to all coins for now - the soon to be published GUI will change that**
   - $maxPositions = "3" **The maximum orders you want to have open at the same time**
   - $maxPairs = "8" **The maximum pairs you want to trade, always the top of the chart is used**
   - $maxPositions = "3" **The maximum orders you want to have open at the same time**
